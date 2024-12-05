@@ -1,0 +1,84 @@
+/* 
+- Font size: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system: 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card styling */
+.card {
+  width: 38.4rem;
+  height: 52.2rem;
+  background-color: #fff;
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  display: grid;
+  gap: 1.6rem;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0.8rem 0.6rem 0rem 0.4rem rgba(0, 0, 0, 10);
+}
+
+.card__img {
+  width: 100%;
+  border-radius: 1.6rem;
+}
+
+.card__date,
+.card__tag,
+.card__author-name {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: rgb(17, 17, 17);
+}
+
+.card__tag {
+  font-weight: 700;
+  background-color: hsl(47, 88%, 63%);
+  padding: 0.4rem 1.2rem;
+  width: fit-content;
+  border-radius: 0.4rem;
+}
+
+.card__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: rgb(107, 107, 107);
+}
+
+.card__author {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card__author-img {
+  width: 4rem;
+  border-radius: 50%;
+}
+
+/* MOBILE */
+@media (max-width: 25em) {
+  html {
+    font-size: 47.5%;
+  }
+}
