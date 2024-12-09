@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+
+/* 
+- Font size: 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+- Spacing system: 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+:root {
+  --fc-purple-100: hsl(254, 88%, 90%);
+  --fc-purple-500: hsl(256, 67%, 59%);
+  --fc-yellow-100: hsl(31, 66%, 93%);
+  --fc-yellow-500: hsl(39, 100%, 71%);
+  --fc-white: hsl(0, 0%, 100%);
+  --fc-black: hsl(0, 0%, 7%);
+
+  --ff-primary: "DM Sans", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  padding: 2rem;
+  background-color: #e4e4e4;
+}
+
+h1 {
+  font-size: 3.6rem;
+  font-weight: var(--fw-medium);
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  letter-spacing: -0.2rem;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* General styles */
+.card {
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+/* individual grid item */
+.create {
+  background-color: var(--fc-yellow-100);
+  place-content: center;
+}
+
+.create img,
+.write img {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.write {
+  background-color: var(--fc-yellow-500);
+  place-content: center;
+}
+
+.social-media {
+  background-color: var(--fc-purple-500);
+  text-align: center;
+  color: var(--fc-white);
+  place-content: center;
+}
+
+.social-media img {
+  margin-inline: auto;
+  width: 50%;
+}
+
+.social-media small {
+  font-size: 1.2rem;
+  color: #d7d7d7;
+}
+
+.manage {
+  background-color: var(--fc-white);
+  overflow-x: hidden;
+  position: relative;
+}
+.manage img {
+  position: relative;
+  left: 5rem;
+  border-radius: 100rem;
+}
+
+.posting {
+  background-color: var(--fc-yellow-500);
+  overflow-y: hidden;
+  position: relative;
+}
+
+.posting img {
+  width: 80%;
+  position: absolute;
+  bottom: -6rem;
+}
+
+.schedule {
+  background-color: var(--fc-purple-100);
+  height: 100%;
+  overflow: hidden;
+}
+
+.schedule img {
+  width: 150%;
+  max-width: none;
+}
+
+.grow {
+  background-color: var(--fc-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grow img {
+  margin-top: 1.6rem;
+}
+
+.non-stop {
+  background-color: var(--fc-purple-500);
+  grid-template-columns: 1fr 1fr;
+  color: var(--fc-white);
+  place-items: center;
+}
+
+/* Grid styles */
+
+.container {
+  max-width: 60%;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "column1 column2 column3"
+    "column1 column2 column3"
+    "column1 column4 column4";
+}
+
+.column-1 {
+  grid-area: column1;
+  grid-template-rows: 1fr 1fr;
+}
+
+.column-2 {
+  grid-area: column2;
+  grid-template-rows: 1fr 1fr;
+}
+
+.column-2 .inside-element {
+  padding: 0;
+}
+
+.inside-element {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.column-3 {
+  grid-area: column3;
+}
+
+.column-4 {
+  grid-area: column4;
+  grid-template-columns: 0.5fr 1fr;
+}
