@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <div class="menu--container">
+        <h1>Desserts</h1>
+        <div class="product--list" id="product--list"></div>
+      </div>
+      <div class="cart--container">
+        <h2 style="color: var(--red)">
+          Your Cart (<span id="cart--total--count">0</span>)
+        </h2>
+        <div class="cart"></div>
+        <div class="place--holder">
+          <img
+            src="./assets/images/illustration-empty-cart.svg"
+            alt="empty cart"
+          />
+          <small>Your added items will appear here</small>
+        </div>
+
+        <div class="order--footer hide" id="order--footer">
+          <div class="order--total">
+            <p style="color: var(--rose-500)">Order Total</p>
+            <h2 id="order--total--price">$0.00</h2>
+          </div>
+
+          <div class="disclaimer">
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="" />
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+          <button>Confirm Order</button>
+        </div>
+      </div>
+    </main>
+    <!-- Confirm modal -->
+    <div class="modal hide" id="modal">
+      <div class="modal--content">
+        <img src="./assets/images/icon-order-confirmed.svg" alt="" />
+        <h1>Order Confirmed</h1>
+        <p>We hope you enjoy your food!</p>
+        <div class="order--items" id="order--items"></div>
+        <button id="reset">Start New Order</button>
+      </div>
+    </div>
+  </body>
+</html>
